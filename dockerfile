@@ -11,5 +11,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the FastAPI app code
 COPY app.py .
 
-# Command to run the app using Uvicorn
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Command to run the app using Uvicorn, which binds to the dynamic port
+CMD ["python", "main.py"]
